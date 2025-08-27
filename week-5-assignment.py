@@ -34,3 +34,30 @@ my_phone.charge_battery(2)
 my_camera_phone = CameraPhone("Samsung", "Galaxy S21", 8)
 my_camera_phone.take_photo()
 my_camera_phone.make_call("Bob")
+
+# Base class for vehicles
+class Vehicle:
+    def move(self):
+        raise NotImplementedError("Subclasses must implement this method!")
+
+# Car class that inherits from Vehicle
+class Car(Vehicle):
+    def move(self):
+        print("Driving 🚗")
+
+# Plane class that inherits from Vehicle
+class Plane(Vehicle):
+    def move(self):
+        print("Flying ✈️")
+
+# Bicycle class that inherits from Vehicle
+class Bicycle(Vehicle):
+    def move(self):
+        print("Pedaling 🚲")
+
+# List of vehicles
+vehicles = [Car(), Plane(), Bicycle()]
+
+# Demonstrating polymorphism
+for vehicle in vehicles:
+    vehicle.move()  # Calls the move method of each vehicle
